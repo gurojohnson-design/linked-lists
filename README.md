@@ -22,3 +22,9 @@ Prettier install
 Babel install
 
     npm install --save-dev @babel/preset-env
+
+All of these together to save time
+
+npm install gh-pages --save-dev && npm init @eslint/config@latest && npm install --save-dev --save-exact prettier && npm install --save-dev @babel/preset-env
+
+
