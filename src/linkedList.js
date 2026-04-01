@@ -42,7 +42,7 @@ export class linkedList {
 
 
     // size() total length of list
-    size() {
+    getSize() {
         return this.size;
     }
 
@@ -50,7 +50,7 @@ export class linkedList {
 
 
     // head() value of first node-- if no node return undefined
-    head() {
+    getHead() {
         if (this.head) {
             return this.head.value;
         } else {
@@ -81,7 +81,8 @@ export class linkedList {
         if (!this.head || index < 0 || index > this.length) {
             return undefined;
         }
-        for (i = 0; i < index; i++) {
+        let current = this.head;
+        for (let i = 1; i < index; i++) {
             current = current.next;
         }
         return current.value;
@@ -94,9 +95,8 @@ export class linkedList {
         if (!this.head) {
             return undefined;
         }
-        let headValue = this.head.value;
-        let newList = this.head.next;
-        return headValue, newList;
+        let headValue = this.head;
+        return headValue.value;
     }
 
 
@@ -124,10 +124,10 @@ export class linkedList {
             let current = this.head;
             let index = 0;
             while (current.value !== null) {
-                index++;
                 if (current.value === value) {
                     return index;
                 } else current = current.next;
+                index++;                
             } return -1;
         };
     }
@@ -149,3 +149,6 @@ export class linkedList {
 
 
 }
+
+
+// node src/index.js
